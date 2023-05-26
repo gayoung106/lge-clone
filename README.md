@@ -21,6 +21,10 @@ npx creat-react-app lge-clone .
     npm start
 ```
 
+## Period
+
+- 23.05.25 ~ 진행중
+
 ## Demo
 
 //
