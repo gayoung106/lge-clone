@@ -20,7 +20,7 @@ const Filter = () => {
         width: "100%",
         display: "flex",
         margin: "0 260px",
-        padding: "0 10%",
+        padding: "0 10% 20px 10%",
       }}
       className="ranking_content"
     >

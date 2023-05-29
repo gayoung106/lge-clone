@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionWrap = styled.div`
-  margin-top: 100px;
+  padding: 55px 0 20px 0;
 `;
 
 export const Sections = styled.div`

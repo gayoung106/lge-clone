@@ -3,6 +3,7 @@ import React from "react";
 import Section from "../organisms/Section";
 import HorizontalScroll from "../organisms/HorizontalScroll";
 import Filter from "../organisms/Filter";
+import Rank from "../organisms/Rank";
 
 const Parts = () => {
   return (
@@ -20,6 +21,7 @@ const Parts = () => {
         <Section content="베스트 랭킹" sub="최근 가장 많이 본 제품" />
         <div>
           <Filter />
+          <Rank />
         </div>
       </div>
 
