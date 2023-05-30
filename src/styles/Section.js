@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionWrap = styled.div`
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
 `;
 
 export const Sections = styled.div`

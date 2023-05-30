@@ -17,10 +17,12 @@ const Filter = () => {
   return (
     <div
       style={{
-        width: "100%",
+        width: "1380px",
+        height: "44px",
         display: "flex",
-        margin: "0 260px",
-        padding: "0 10% 20px 10%",
+        // margin: "0 260px",
+        // padding: "0 10% 20px 10%",
+        marginTop: "24px",
       }}
       className="ranking_content"
     >

@@ -5,6 +5,7 @@ export const SectionWrap = styled.div`
   height: 500px;
   display: flex;
   gap: 0 24px;
+  margin-top: 32px;
 `;
 
 export const ImageWrap = styled.div`

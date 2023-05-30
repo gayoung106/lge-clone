@@ -12,35 +12,36 @@ export const TabWrap = styled.div`
   position: relative;
   display: block;
   text-align: center;
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     overflow: visible !important;
-  }
+  } */
 `;
 
 export const Tabs = styled.ul`
   display: inline-block;
   /* max-width: 100%; */
   position: relative;
-  margin: 0 -2px;
-  padding: 0 2px;
+  /* margin: 0 -2px; */
+  padding: 0 4px;
+
   font-size: 0;
   vertical-align: top;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     white-space: normal;
     transform: none !important;
     transition: none !important;
     margin-top: -8px;
-  }
+  } */
 `;
 
 export const TabList = styled.li`
-  margin-top: 8px;
+  /* margin-top: 8px;
   margin-left: 0;
-  margin-right: 8px;
+  margin-right: 8px; */
   display: inline-block;
   padding: 2px 0;
   vertical-align: top;
