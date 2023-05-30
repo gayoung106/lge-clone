@@ -1,10 +1,10 @@
 import styled from "styled-components";
 export const TextWrap = styled.div`
-  position: absolute;
+  /* position: absolute; */
   /* bottom: 0; */
-  top: 1%;
-  left: 20px;
-  transform: translateY(-50%);
+  /* top: 1%;
+  left: 20px; */
+  /* transform: translateY(-50%); */
   width: 100%;
   padding: 20px;
   text-align: center;

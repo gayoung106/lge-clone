@@ -18,23 +18,23 @@ const Home = () => {
       <Header />
 
       <Carousel />
-      <div style={{ position: "relative", marginTop: "505px" }}>
-        <Popup />
+      {/* <div style={{ position: "relative", marginTop: "600px" }}> */}
+      <Popup />
 
-        <Menu />
-        <Advertise />
-        <Sections />
-        <Slide />
-        <Rank />
-        <Recommend />
-        <Grid />
-        <Slide />
-        <Grid />
-        {/* <Advertise /> */}
-        <Grid />
-        <Information />
-        <Footer />
-      </div>
+      <Menu />
+      <Advertise />
+      <Sections />
+      <Slide />
+      <Rank />
+      <Recommend />
+      <Grid />
+      <Slide />
+      <Grid />
+      {/* <Advertise /> */}
+      <Grid />
+      <Information />
+      <Footer />
+      {/* </div> */}
     </div>
   );
 };

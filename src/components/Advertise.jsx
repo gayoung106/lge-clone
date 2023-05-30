@@ -24,7 +24,7 @@ const bannerItems = [
 
 const Advertise = () => {
   return (
-    <Banner style={{ marginTop: "0" }}>
+    <Banner>
       {bannerItems.map((item, index) => (
         <a
           key={index}

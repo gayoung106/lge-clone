@@ -1,7 +1,6 @@
 import React from "react";
 import {
   SectionWrap,
-  SectionContent,
   ImageWrap,
   Image,
   ItemInfo,
@@ -11,6 +10,7 @@ import {
   Blind,
   ItemPrice,
   Line,
+  ImageSpan,
 } from "../styles/Scroll";
 import Item01 from "../assets/item01.avif";
 import Item02 from "../assets/item02.avif";
@@ -41,42 +41,37 @@ const HorizontalScroll = () => {
   ];
   return (
     <SectionWrap>
-      <div className="section-list" style={{ display: "flex" }}>
-        {items.map((item, index) => (
-          <SectionContent key={index}>
-            <a style={{ textDecoration: "none", color: "#000" }} href="/">
-              <ImageWrap>
-                <span
-                  style={{
-                    paddingTop: "100%",
-                    display: "block",
-                    position: "relative",
-                    textAlign: "center",
-                  }}
-                >
-                  <Image
-                    style={{ background: "rgba(0, 0, 0, 0.035)" }}
-                    src={item.image}
-                    alt=""
-                  />
-                </span>
-              </ImageWrap>
+      {/* <div className="section-list" style={{ display: "flex" }}> */}
+      {items.map((item, index) => (
+        <a
+          key={index}
+          style={{ textDecoration: "none", color: "#000" }}
+          href="/"
+        >
+          <ImageWrap>
+            <ImageSpan>
+              <Image
+                style={{ background: "rgba(0, 0, 0, 0.035)" }}
+                src={item.image}
+                alt=""
+              />
+            </ImageSpan>
+          </ImageWrap>
 
-              <ItemInfo>
-                <Line />
-                <ItemName>{item.name}</ItemName>
-                <ItemSku>{item.sku}</ItemSku>
-                <PriceWrap>
-                  <Blind>판매가격</Blind>
-                  <ItemPrice>
-                    <span>{item.price}</span> 원
-                  </ItemPrice>
-                </PriceWrap>
-              </ItemInfo>
-            </a>
-          </SectionContent>
-        ))}
-      </div>
+          <ItemInfo>
+            <Line />
+            <ItemName>{item.name}</ItemName>
+            <ItemSku>{item.sku}</ItemSku>
+            <PriceWrap>
+              <Blind>판매가격</Blind>
+              <ItemPrice>
+                <span>{item.price}</span> 원
+              </ItemPrice>
+            </PriceWrap>
+          </ItemInfo>
+        </a>
+      ))}
+      {/* </div> */}
     </SectionWrap>
   );
 };

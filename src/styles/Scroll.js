@@ -3,40 +3,34 @@ import styled from "styled-components";
 export const SectionWrap = styled.div`
   max-width: 1380px;
   height: 500px;
-`;
-
-export const SectionContent = styled.div`
-  margin: 0 0 0 24px;
-  @media screen and (min-width: 768px) {
-    width: calc(25% + 6px);
-    height: auto;
-
-    /* padding-left: 24px; */
-  }
+  display: flex;
+  gap: 0 24px;
 `;
 
 export const ImageWrap = styled.div`
   position: relative;
   border-radius: 12px 12px 0 0;
+  width: 327px;
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     padding: 12px 33px 12px 34px;
     background: rgba(0, 0, 0, 0.035);
-  }
+  } */
 `;
 
 export const Image = styled.img`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 80%;
+  max-width: 260px;
   height: auto;
   transform: translate(-50%, -50%);
   margin: 0;
   vertical-align: middle;
   overflow-clip-margin: content-box;
   overflow: clip;
-  background: rgba(0, 0, 0, 0.035);
+  background-color: rgba(0, 0, 0, 0.035);
 `;
 
 export const ItemInfo = styled.div`
@@ -94,4 +88,22 @@ export const Line = styled.div`
   position: absolute;
   top: 0;
   background: #ddd;
+`;
+
+export const ImageSpan = styled.span`
+  padding-top: 100%;
+  display: block;
+  position: relative;
+  text-align: center;
+  &::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.035);
+  }
 `;

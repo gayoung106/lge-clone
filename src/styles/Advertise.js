@@ -1,22 +1,27 @@
 import styled from "styled-components";
 
 export const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  max-width: 1476px;
+  width: 100%;
+  /* max-width: 1476px; */
   /* margin: 200px auto;
   padding: 0 48px; */
-  margin: 40px 450px 56px;
+  /* margin: 40px 450px 56px; */
+  /* margin-top: 40px; */
   padding: 0px 48px;
-  height: 180px;
+  height: 100%;
+  row-gap: 30px;
 `;
 
 export const Image = styled.div`
   position: relative;
   width: auto;
   height: 100%;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  /* padding-top: 30px; */
 `;
 
 export const TextWrap = styled.div`
