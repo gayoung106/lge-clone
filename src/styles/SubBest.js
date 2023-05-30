@@ -1,60 +1,45 @@
 import styled from "styled-components";
 
-export const BestWrap = styled.div`
-  margin-top: 32px;
-  padding: 0;
-  word-break: break-all;
-  width: 1380px;
-`;
-
-export const SalesList = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 552px;
-  row-gap: 24px;
-`;
-
-export const MainBanner = styled.div`
-  height: 552px;
-  width: calc((100% - 24px) / 2);
-  border-radius: 16px;
-  box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.14);
+export const SubBanner = styled.div`
   background-color: #fff;
   overflow: hidden;
-
-  &:first-child {
-    margin-left: 0;
-  }
+  width: calc((100% - 24px) / 2);
+  height: 264px;
+  margin-left: 24px;
+  border-radius: 16px;
+  box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.14);
 `;
 
 export const Atag = styled.a`
+  padding: 22px 32px 21px;
+  display: flex;
   color: inherit;
   text-decoration: none;
-  padding: 0;
-  flex-direction: column;
-  display: flex;
 `;
 
-export const MainImage = styled.div`
+export const ImageItem = styled.div`
   display: block;
 `;
 
-export const MainSpan = styled.span`
-  width: 100%;
-  height: 358px;
-  position: relative;
+export const ImgSpan = styled.span`
+  width: 200px;
+  height: 200px;
   display: flex;
+  position: relative;
 `;
 
 export const Image = styled.img`
-  max-width: 678px;
-  max-height: 358px;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 `;
 
 export const ItemInfo = styled.div`
-  margin-left: 0;
-  padding: 29px 32px 32px;
+  margin-left: 40px;
+  padding-top: 39px;
   align-self: flex-start;
 `;
 
@@ -70,18 +55,18 @@ export const ItemName = styled.div`
 `;
 
 export const ItemSku = styled.div`
-  font-size: 16px;
   margin-top: 2px;
+  font-size: 16px;
   display: block;
   line-height: 1.43;
   color: #666;
 `;
 
 export const PriceWrap = styled.div`
-  margin-top: 22px;
+  margin-top: 16px;
 `;
 
-export const Blind = styled.em`
+export const Bline = styled.em`
   position: absolute;
   z-index: -10;
   width: 0 !important;
@@ -90,7 +75,6 @@ export const Blind = styled.em`
   font-size: medium;
   line-height: normal;
   word-break: break-all;
-  font-style: normal;
 `;
 
 export const ItemPrice = styled.span`

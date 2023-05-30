@@ -6,6 +6,7 @@ import Filter from "../organisms/Filter";
 import Rank from "../organisms/Rank";
 import { SectionTop } from "../styles/Section";
 import Best from "../organisms/Best";
+import New from "../organisms/New";
 
 const Parts = () => {
   return (
@@ -33,7 +34,15 @@ const Parts = () => {
           <Best />
         </SectionTop>
       </div>
-      <Section content="가전을 만나는 새로운 경험" sub="LGE.COM 체험 컨텐츠" />
+      <div style={{ padding: "80px 48px" }}>
+        <SectionTop>
+          <Section
+            content="가전을 만나는 새로운 경험"
+            sub="LGE.COM 체험 컨텐츠"
+          />
+          <New />
+        </SectionTop>
+      </div>
       <Section content="최신 제품 소식" />
       <Section content="슬기로운 가전생활" />
     </>

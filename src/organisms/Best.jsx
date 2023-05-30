@@ -15,6 +15,7 @@ import {
   Atag,
 } from "../styles/Best";
 import best01 from "../assets/best01.avif";
+import SubBest from "./SubBest";
 
 const Best = () => {
   return (
@@ -39,25 +40,7 @@ const Best = () => {
             </ItemInfo>
           </Atag>
         </MainBanner>
-        <div>
-          <a href="/">
-            <div>
-              <span>
-                <img src="/" alt="" />
-              </span>
-            </div>
-            <div>
-              <div></div>
-              <div></div>
-              <div>
-                <em></em>
-                <span>
-                  <em></em>
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
+        <SubBest />
       </SalesList>
     </BestWrap>
   );
