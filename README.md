@@ -27,7 +27,7 @@ npx creat-react-app lge-clone .
 
 ## Demo
 
-//
+https://lge-clone.vercel.app/
 
 ## Features
 
