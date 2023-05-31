@@ -38,15 +38,15 @@ const Bottombody = () => {
       <CallTo>
         <CallList>
           <span>대표번호: </span>
-          <CallTag href="/">02-3777-1114</CallTag>
+          <CallTag href="/">02-0000-0000</CallTag>
         </CallList>
         <CallList style={{ paddingLeft: "5px" }}>
           <span>제품/서비스 문의 : </span>
-          <CallTag href="/">1544-7777</CallTag>
+          <CallTag href="/">0000-0000</CallTag>
         </CallList>
         <CallList style={{ paddingLeft: "5px", border: "none" }}>
           <span>LGE.COM 구매 문의(가전/소모품/렌탈 신규) : </span>
-          <CallTag href="/">1544-6351</CallTag>
+          <CallTag href="/">0000-0000</CallTag>
         </CallList>
       </CallTo>
       <TimeTo>
@@ -62,8 +62,8 @@ const Bottombody = () => {
       </TimeTo>
       <InfoWrap>
         <InfoP>
-          <InfoSpan>대표이사 : 조주완, 배두용</InfoSpan>
-          <InfoSpan>사업자등록번호 : 107-86-14075</InfoSpan>
+          <InfoSpan>대표이사 : 송가영</InfoSpan>
+          <InfoSpan>사업자등록번호 : 000-00-0000</InfoSpan>
           <InfoSpan
             style={{
               color: "#fff",
@@ -74,23 +74,22 @@ const Bottombody = () => {
             }}
           >
             <a style={{ color: "inherit", textDecoration: "none" }} href="/">
-              사업자 정보확인
+              LGE CloneCoding
             </a>
           </InfoSpan>
-          <InfoSpan>통신판매업신고번호 : 제1997-00084인</InfoSpan>
-          <InfoSpan>주소 : 서울시 영등포구 여의대로 128 LG트윈타워</InfoSpan>
+          <InfoSpan>통신판매업신고번호 : 제2023-00000인</InfoSpan>
+          <InfoSpan>주소 : 서울시 우리집</InfoSpan>
         </InfoP>
         <InfoLastP>
-          본 사이트에서 게시되는 상품 중에는 타 쇼핑몰에서 판매하는 상품이
-          포함되어 있습니다.
+          본 사이트는 LGE(LG전자 홈페이지)를 클론코딩한 사이트 입니다.
         </InfoLastP>
         <InfoLastP>
-          타 쇼핑몰 판매 상품의 경우 엘지전자㈜는 통신판매의 당사자가 아니므로,
-          해당 상품, 거래 정보 및 거래 등에 대해 책임을 지지 않습니다.
+          본 쇼핑몰에서는 상품을 주문할 수 없으며, 해당 기능 또한 존재하지
+          않습니다.
         </InfoLastP>
         <InfoLastP>
-          본 사이트의 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복사,
-          배포 등을 금합니다.
+          본 사이트는 상업 목적이 아님을 다시 명시드리며, 해당 저작권은 LG
+          Electronics에 있음을 분명히 밝힙니다.
         </InfoLastP>
         <InfoLastP>
           Copyright © 2022 LG Electronics. All Rights Reserved.
