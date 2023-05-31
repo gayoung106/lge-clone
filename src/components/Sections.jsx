@@ -4,13 +4,22 @@ import Section from "../organisms/Section";
 import HorizontalScroll from "../organisms/HorizontalScroll";
 import Filter from "../organisms/Filter";
 import Rank from "../organisms/Rank";
-import { SectionTop } from "../styles/Section";
+import { SectionTop, SectionRow } from "../styles/Section";
 import Best from "../organisms/Best";
 import New from "../organisms/New";
+import Product from "../organisms/Product";
+import Life from "../organisms/Life";
+import Advertise from "./Advertise";
+import Benefit from "../organisms/Benefit";
 
 const Parts = () => {
+  const firstAdIdx = 0;
+  const firstAdEndIdx = 2;
+  const secondAdIdx = 3;
+  const secondAdEndIdx = 5;
   return (
     <>
+      <Advertise startIndex={firstAdIdx} endIndex={firstAdEndIdx} />
       <div style={{ padding: "80px 48px" }}>
         <SectionTop>
           <Section
@@ -43,8 +52,33 @@ const Parts = () => {
           <New />
         </SectionTop>
       </div>
-      <Section content="최신 제품 소식" />
-      <Section content="슬기로운 가전생활" />
+      <div style={{ backgroundColor: "#F1F1F1", padding: "80px 48px" }}>
+        <SectionRow>
+          <Section content="최신 제품 소식" />
+          <Product />
+        </SectionRow>
+      </div>
+      <div style={{ padding: "80px 48px" }}>
+        <SectionTop>
+          <Section content="슬기로운 가전생활" />
+          <Life />
+        </SectionTop>
+      </div>
+      <Advertise startIndex={secondAdIdx} endIndex={secondAdEndIdx} />
+      <div style={{ padding: "80px 48px" }}>
+        <SectionTop>
+          <Section content="놓치면 아쉬운 혜택" />
+          <Benefit />
+        </SectionTop>
+      </div>
+      <div style={{ backgroundColor: "#F1F1F1", padding: "80px 48px" }}>
+        <SectionRow>
+          <Section
+            content="베스트샵 이용 안내"
+            sub="오프라인 서비스를 더욱 간단하게"
+          />
+        </SectionRow>
+      </div>
     </>
   );
 };

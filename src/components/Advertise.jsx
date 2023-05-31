@@ -1,31 +1,11 @@
 import React from "react";
 import { Banner, Image, TextWrap, Title, Text } from "../styles/Advertise";
-import Banner01 from "../assets/banner01.avif";
-import Banner02 from "../assets/banner02.avif";
-import Banner03 from "../assets/banner03.avif";
+import { bannerItems } from "../data/bannerItems";
 
-const bannerItems = [
-  {
-    image: Banner01,
-    title: "푸르른 가정의 달 LGE.COM 단독 구매 혜택",
-    text: "기획전 더 알아보기",
-  },
-  {
-    image: Banner02,
-    title: "100% 당첨 행운의 룰렛 이벤트",
-    text: "이벤트 참여하기",
-  },
-  {
-    image: Banner03,
-    title: "타워에어컨 2023 미리 구매 기획전",
-    text: "기획전 더 알아보기",
-  },
-];
-
-const Advertise = () => {
+const Advertise = ({ startIndex, endIndex }) => {
   return (
     <Banner>
-      {bannerItems.map((item, index) => (
+      {bannerItems.slice(startIndex, endIndex + 1).map((item, index) => (
         <a
           key={index}
           style={{

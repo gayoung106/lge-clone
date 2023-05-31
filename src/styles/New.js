@@ -53,6 +53,7 @@ export const Atag = styled.a`
   display: block;
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export const ItemImage = styled.div`
@@ -83,4 +84,56 @@ export const ItemTitle = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+`;
+
+/* Life component */
+export const Slide = styled.div`
+  opacity: 1;
+  width: 1404px;
+  transform: translate3d(0px, 0px, 0px);
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const ItemCategory = styled.span`
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #767676;
+`;
+
+export const CategoryWrap = styled.div`
+  width: 351px;
+  display: block;
+  padding: 0 12px;
+  max-width: 25%;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+`;
+
+export const LifeItemImg = styled.div`
+  padding-top: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const LifeImg = styled.img`
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80% !important;
+  min-height: 100%;
+  display: block;
+  vertical-align: middle;
+  border: 0 none;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 `;

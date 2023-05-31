@@ -19,7 +19,7 @@ import Theme04 from "../assets/Theme04.avif";
 const themes = [
   { image: Theme01, title: "VR쇼룸" },
   { image: Theme02, title: "렛츠 그램" },
-  { image: Theme03, title: "오브젝컬렌션 체험관" },
+  { image: Theme03, title: "오브젝컬렉션 체험관" },
   { image: Theme04, title: "Jammy" },
 ];
 

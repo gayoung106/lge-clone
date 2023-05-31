@@ -17,3 +17,13 @@ export const SectionTop = styled.div`
   /* padding: 80px 48px; */
   width: 1380px;
 `;
+
+export const SectionRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px 48px;
+  max-width: 1476px;
+  margin: 0 auto;
+  position: relative;
+`;
