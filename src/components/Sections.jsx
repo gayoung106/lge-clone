@@ -11,6 +11,7 @@ import Product from "../organisms/Product";
 import Life from "../organisms/Life";
 import Advertise from "./Advertise";
 import Benefit from "../organisms/Benefit";
+import Bestshop from "../organisms/Bestshop";
 
 const Parts = () => {
   const firstAdIdx = 0;
@@ -77,6 +78,7 @@ const Parts = () => {
             content="베스트샵 이용 안내"
             sub="오프라인 서비스를 더욱 간단하게"
           />
+          <Bestshop />
         </SectionRow>
       </div>
     </>
