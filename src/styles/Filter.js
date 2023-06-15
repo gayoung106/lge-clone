@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const RankTab = styled.div`
   overflow: hidden;
 
+  &.selected {
+    background: #303030;
+    color: #fff;
+    font-weight: 500;
+  }
+
   @media screen and (min-width: 768px) {
     /* margin-top: 24px; */
   }
@@ -49,14 +55,15 @@ export const TabList = styled.li`
 `;
 
 export const TabName = styled.a`
-  background: #303030;
-  color: #fff;
+  background: #e2e2e2;
+  color: #000;
   font-weight: 500;
   padding: 10px 24px;
   font-size: 14px;
   line-height: 40px;
   border-radius: 40px;
   text-decoration: none;
+  cursor: pointer;
 
   /* display: block;
 color: #000;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { RankTab, TabWrap, Tabs, TabList, TabName } from "../styles/Filter";
 // import ranks from "../data/rankItems";
 
@@ -16,7 +16,7 @@ import { RankTab, TabWrap, Tabs, TabList, TabName } from "../styles/Filter";
 //   { id: 11, name: "AV", category: "AV" },
 // ];
 
-const Filter = ({ menu, onMenu }) => {
+const Filter = ({ menu, onMenu, selectedCategory }) => {
   return (
     <div
       style={{
@@ -32,13 +32,12 @@ const Filter = ({ menu, onMenu }) => {
       {menu.map((item) => (
         <RankTab
           key={item.id}
-          item={item}
-          onClick={() => onMenu(item.category)}
+          className={selectedCategory === item.category ? "selected" : ""}
         >
           <TabWrap>
             <Tabs>
               <TabList>
-                <TabName>
+                <TabName onClick={() => onMenu(item.category)}>
                   <span>{item.name}</span>
                 </TabName>
               </TabList>

@@ -5,6 +5,7 @@ import ranks from "../data/rankItems";
 
 const FilterRank = () => {
   const [data, setData] = useState(ranks);
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [menu, setMenu] = useState([
     { id: 1, name: "에어컨", category: "airconditioner" },
     { id: 2, name: "공기청정기", category: "airclean" },
@@ -20,6 +21,7 @@ const FilterRank = () => {
   ]);
 
   const onMenu = (category) => {
+    setSelectedCategory(category);
     if (category === "all") {
       setData(ranks);
     } else {
@@ -33,9 +35,14 @@ const FilterRank = () => {
     );
     setData(initialData);
   }, []);
+
   return (
     <>
-      <Filter menu={menu} onMenu={onMenu} />
+      <Filter
+        menu={menu}
+        onMenu={onMenu}
+        selectedCategory={setSelectedCategory}
+      />
       <Rank data={data} />
     </>
   );
