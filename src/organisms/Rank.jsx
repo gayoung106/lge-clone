@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   RankWrap,
   RankList,
@@ -12,35 +12,12 @@ import {
   ItemSku,
   Atag,
 } from "../styles/Rank";
-import rankitem01 from "../assets/rankitem01.avif";
-import rankitem02 from "../assets/rankitem02.avif";
-import rankitem03 from "../assets/rankitem03.avif";
+// import ranks from "../data/rankItems";
 
-const ranks = [
-  {
-    image: rankitem01,
-    name: "LG 퓨리케어 360˚ 공기청정기 Hit",
-    sku: "AS183HWWA",
-    price: "319,000",
-  },
-  {
-    image: rankitem02,
-    name: "LG 퓨리케어 오브제컬렉션 360˚ 알파UP (G 필터)",
-    sku: "AS353NS3A",
-    price: "1,890,000",
-  },
-  {
-    image: rankitem03,
-    name: "LG 퓨리케어 360˚ 공기청정기 Hit",
-    sku: "AS183HWWA",
-    price: "479,000",
-  },
-];
-
-const Rank = () => {
+const Rank = ({ data }) => {
   return (
     <RankWrap>
-      {ranks.map((item, index) => (
+      {data.map((item, index) => (
         <RankList key={index + 1}>
           <Atag href="/">
             <ItemImage>

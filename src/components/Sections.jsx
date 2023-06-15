@@ -2,6 +2,7 @@ import React from "react";
 
 import Section from "../organisms/Section";
 import HorizontalScroll from "../organisms/HorizontalScroll";
+// import FilterRank from "../organisms/FilterRank";
 import Filter from "../organisms/Filter";
 import Rank from "../organisms/Rank";
 import { SectionTop, SectionRow } from "../styles/Section";
@@ -12,6 +13,7 @@ import Life from "../organisms/Life";
 import Advertise from "./Advertise";
 import Benefit from "../organisms/Benefit";
 import Bestshop from "../organisms/Bestshop";
+import FilterRank from "../organisms/FilterRank";
 
 const Parts = () => {
   const firstAdIdx = 0;
@@ -34,8 +36,7 @@ const Parts = () => {
       <div style={{ backgroundColor: "#F1F1F1", padding: "80px 48px" }}>
         <SectionTop>
           <Section content="베스트 랭킹" sub="최근 가장 많이 본 제품" />
-          <Filter />
-          <Rank />
+          <FilterRank />
         </SectionTop>
       </div>
       <div style={{ padding: "80px 48px" }}>

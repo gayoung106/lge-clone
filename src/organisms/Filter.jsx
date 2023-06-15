@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { RankTab, TabWrap, Tabs, TabList, TabName } from "../styles/Filter";
+// import ranks from "../data/rankItems";
 
-const Filter = () => {
-  const tabItems = [
-    { id: 1, name: "공기청정기" },
-    { id: 2, name: "노트북" },
-    { id: 3, name: "에어컨" },
-    { id: 4, name: "TV" },
-    { id: 5, name: "냉장고" },
-    { id: 6, name: "김치냉장고" },
-    { id: 7, name: "식기세척기" },
-    { id: 8, name: "워시타워" },
-    { id: 9, name: "청소기" },
-    { id: 10, name: "AV" },
-  ];
+// const tabItems = [
+//   { id: 1, name: "에어컨", category: "airconditioner" },
+//   { id: 2, name: "공기청정기", category: "airclean" },
+//   { id: 3, name: "노트북", category: "notebook" },
+//   { id: 4, name: "TV", category: "TV" },
+//   { id: 5, name: "냉장고", category: "refre" },
+//   { id: 6, name: "김치냉장고", category: "gimchi" },
+//   { id: 7, name: "식기세척기", category: "dish" },
+//   { id: 8, name: "워시타워", category: "tower" },
+//   { id: 9, name: "세탁기", category: "wash" },
+//   { id: 10, name: "청소기", category: "clean" },
+//   { id: 11, name: "AV", category: "AV" },
+// ];
+
+const Filter = ({ menu, onMenu }) => {
   return (
     <div
       style={{
@@ -26,12 +29,16 @@ const Filter = () => {
       }}
       className="ranking_content"
     >
-      {tabItems.map((item, index) => (
-        <RankTab key={index}>
+      {menu.map((item) => (
+        <RankTab
+          key={item.id}
+          item={item}
+          onClick={() => onMenu(item.category)}
+        >
           <TabWrap>
             <Tabs>
               <TabList>
-                <TabName href="/">
+                <TabName>
                   <span>{item.name}</span>
                 </TabName>
               </TabList>
