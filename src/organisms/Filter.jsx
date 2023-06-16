@@ -1,20 +1,5 @@
 import React from "react";
 import { RankTab, TabWrap, Tabs, TabList, TabName } from "../styles/Filter";
-// import ranks from "../data/rankItems";
-
-// const tabItems = [
-//   { id: 1, name: "에어컨", category: "airconditioner" },
-//   { id: 2, name: "공기청정기", category: "airclean" },
-//   { id: 3, name: "노트북", category: "notebook" },
-//   { id: 4, name: "TV", category: "TV" },
-//   { id: 5, name: "냉장고", category: "refre" },
-//   { id: 6, name: "김치냉장고", category: "gimchi" },
-//   { id: 7, name: "식기세척기", category: "dish" },
-//   { id: 8, name: "워시타워", category: "tower" },
-//   { id: 9, name: "세탁기", category: "wash" },
-//   { id: 10, name: "청소기", category: "clean" },
-//   { id: 11, name: "AV", category: "AV" },
-// ];
 
 const Filter = ({ menu, onMenu, selectedCategory }) => {
   return (
@@ -30,14 +15,16 @@ const Filter = ({ menu, onMenu, selectedCategory }) => {
       className="ranking_content"
     >
       {menu.map((item) => (
-        <RankTab
-          key={item.id}
-          className={selectedCategory === item.category ? "selected" : ""}
-        >
+        <RankTab key={item.id}>
           <TabWrap>
             <Tabs>
               <TabList>
-                <TabName onClick={() => onMenu(item.category)}>
+                <TabName
+                  onClick={() => onMenu(item.category)}
+                  className={
+                    selectedCategory === item.category ? "selected" : ""
+                  }
+                >
                   <span>{item.name}</span>
                 </TabName>
               </TabList>

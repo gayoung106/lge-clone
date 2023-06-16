@@ -32,7 +32,9 @@ const Carousel = () => {
   };
 
   const handleStop = () => {
-    setAutoplay(false);
+    setAutoplay((prevAutoplay) => !prevAutoplay);
+    sliderRef.current.slickPause();
+    sliderRef.current.forceUpdate();
   };
   const settings = {
     dots: false,
@@ -40,7 +42,7 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: autoplay,
     autoplaySpeed: 2000,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };

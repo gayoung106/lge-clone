@@ -38,11 +38,7 @@ const FilterRank = () => {
 
   return (
     <>
-      <Filter
-        menu={menu}
-        onMenu={onMenu}
-        selectedCategory={setSelectedCategory}
-      />
+      <Filter menu={menu} onMenu={onMenu} selectedCategory={selectedCategory} />
       <Rank data={data} />
     </>
   );
