@@ -4,6 +4,7 @@ export const PopupWrap = styled.div`
   left: 0;
   width: 100%;
   margin-top: 0;
+
   height: 100px;
   background-color: rgb(96, 60, 225) !important;
   z-index: 1;

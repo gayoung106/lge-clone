@@ -2,9 +2,6 @@ import React from "react";
 
 import Section from "../organisms/Section";
 import HorizontalScroll from "../organisms/HorizontalScroll";
-// import FilterRank from "../organisms/FilterRank";
-import Filter from "../organisms/Filter";
-import Rank from "../organisms/Rank";
 import { SectionTop, SectionRow } from "../styles/Section";
 import Best from "../organisms/Best";
 import New from "../organisms/New";
@@ -58,6 +55,7 @@ const Parts = () => {
       <div style={{ backgroundColor: "#F1F1F1", padding: "80px 48px" }}>
         <SectionRow>
           <Section content="최신 제품 소식" />
+
           <Product />
         </SectionRow>
       </div>

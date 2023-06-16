@@ -1,14 +1,38 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: calc((100% - 24px) / 4 * 3);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  /* Add scrollbar styles */
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #c1c1c1;
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 12px;
+  }
+`;
 export const ProductWrap = styled.div`
   visibility: visible;
   width: calc((100% - 24px) / 4 * 3);
+  min-width: 1017px;
 `;
 
 export const ProductList = styled.div`
   padding-bottom: 16px;
   display: flex;
-  overflow-x: auto;
   column-gap: 24px;
 `;
 
