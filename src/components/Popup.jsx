@@ -1,29 +1,32 @@
 import React from "react";
-import { TextWrap, Title, Text, Line, ButtonWrap } from "../styles/Popup";
+import {
+  PopupWrap,
+  TextWrap,
+  Title,
+  Text,
+  Line,
+  ButtonWrap,
+  ButtonClose,
+  Close,
+} from "../styles/Popup";
 
 const Popup = () => {
   return (
-    <div
-      style={{
-        left: "0",
-        width: "100%",
-        height: "100px",
-        backgroundColor: "#F4FBED",
-        zIndex: "1",
-      }}
-    >
+    <PopupWrap>
+      <ButtonWrap>
+        <ButtonClose>
+          <Close>X</Close>
+        </ButtonClose>
+      </ButtonWrap>
       <TextWrap>
         <div>
           <Line>
-            <Title>Welcome to LGE.COM</Title>
+            <Title>지금 회원 가입하고 5% 할인쿠폰 받으세요</Title>
           </Line>
-          <Text>지금 회원 가입하고 5% 할인쿠폰 받으세요!</Text>
+          <Text>회원가입 하러가기 →</Text>
         </div>
-        <ButtonWrap>
-          <span>X</span>
-        </ButtonWrap>
       </TextWrap>
-    </div>
+    </PopupWrap>
   );
 };
 

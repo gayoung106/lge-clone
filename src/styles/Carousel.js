@@ -1,6 +1,107 @@
 import styled from "styled-components";
 
+export const SlideContent = styled.div`
+  overflow: hidden;
+`;
+
+export const SlideUl = styled.ul`
+  opacity: 1;
+  width: 1360px;
+  transform: translate3d(-1360px, 0, 0);
+  height: 600px;
+  overflow: hidden;
+  list-style: none;
+`;
+export const SlideList = styled.li`
+  float: left;
+  width: 1360px;
+  position: relative;
+  height: 600px;
+  list-style: none;
+`;
+
+export const Atag = styled.a`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: inherit;
+  text-decoration: none;
+`;
+
+export const ImageWrap = styled.div`
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+`;
+
+export const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+  vertical-align: middle;
+`;
+
+export const InfoWrap = styled.div`
+  left: 0;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 48px;
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+`;
+
+export const InfoBox = styled.div`
+  display: inline-block;
+`;
+
+export const LogoWrap = styled.div`
+  display: none;
+  margin-bottom: 12px;
+  height: 16px;
+`;
+export const LogoImg = styled.img`
+  width: auto;
+  height: 100%;
+  vertical-align: middle;
+`;
+
+export const PText = styled.p`
+  color: inherit;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+`;
+
+export const PSmall = styled.p`
+  margin-top: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  opacity: 0.7;
+`;
+
+export const LinkWrap = styled.div`
+  display: inline-block;
+  margin-top: 42px;
+`;
 export const CarouselWrap = styled.div`
+  position: relative;
   width: 100%;
   height: 600px;
   overflow: hidden;
@@ -10,6 +111,7 @@ export const CarouselWrap = styled.div`
   /* position: absolute; */
   /* z-index: 1; */
   margin-top: 5px;
+  margin-bottom: 0;
 `;
 
 export const CarouselImg = styled.img`
@@ -55,7 +157,7 @@ export const SlideControls = styled.div`
   z-index: 10;
 `;
 
-export const Constrols = styled.div`
+export const Controls = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
