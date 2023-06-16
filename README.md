@@ -21,6 +21,17 @@ npx creat-react-app lge-clone .
     npm start
 ```
 
+```bash
+1. Carousel(https://www.npmjs.com/package/react-slick)
+npm install react-slick --save
+npm install slick-carousel --save
+
+2. Scrollbar(https://www.npmjs.com/package/react-horizontal-scrolling-menu)
+npm i react-horizontal-scrolling-menu
+
+
+```
+
 ## Period
 
 - 23.05.25 ~ 진행중
