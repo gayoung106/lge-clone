@@ -29,8 +29,17 @@ const Parts = () => {
             content="LG 베스트 가전 추천 제품"
             sub="놓치기 아쉬운 특별한 가격"
           />
-
-          <HorizontalScroll />
+          <div
+            style={{
+              overflowX: "scroll",
+              overflowY: "hidden",
+              whiteSpace: "nowrap",
+              display: "flex",
+              overflowX: "auto",
+            }}
+          >
+            <HorizontalScroll />
+          </div>
         </SectionTop>
       </div>
       <div style={{ backgroundColor: "#F1F1F1", padding: "80px 48px" }}>

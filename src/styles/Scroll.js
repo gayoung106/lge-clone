@@ -1,5 +1,32 @@
 import styled from "styled-components";
+export const Container = styled.div`
+  overflow: auto;
+  min-width: 1380px;
+  width: 100%;
 
+  /* Add scrollbar styles */
+  .section-list {
+    display: flex;
+    gap: 0 24px;
+    margin-top: 32px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f1f1f1;
+  }
+
+  .section-list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .section-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  .section-list::-webkit-scrollbar-thumb {
+    background-color: #888888;
+  }
+`;
 export const SectionWrap = styled.div`
   max-width: 1380px;
   height: 500px;
