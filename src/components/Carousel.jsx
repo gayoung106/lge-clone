@@ -33,8 +33,11 @@ const Carousel = () => {
 
   const handleStop = () => {
     setAutoplay((prevAutoplay) => !prevAutoplay);
-    sliderRef.current.slickPause();
-    sliderRef.current.forceUpdate();
+    if (!autoplay) {
+      sliderRef.current.slickPlay();
+    } else {
+      sliderRef.current.slickPause();
+    }
   };
   const settings = {
     dots: false,
@@ -74,6 +77,7 @@ const Carousel = () => {
         handleNext={handleNext}
         handleStop={handleStop}
         autoplay={autoplay}
+        sliderRef={sliderRef}
       />
     </div>
   );

@@ -18,7 +18,11 @@ const SlideButton = ({
   handleNext,
   handleStop,
   autoplay,
+  sliderRef,
 }) => {
+  const handlePlay = () => {
+    handleStop();
+  };
   return (
     <ButtonWrap>
       <SlideControls>
@@ -31,7 +35,10 @@ const SlideButton = ({
           <AfterButton onClick={handleNext}></AfterButton>
         </Controls>
       </SlideControls>
-      <StopButton onClick={handleStop} autoplay={autoplay}></StopButton>
+      <StopButton
+        onClick={handlePlay}
+        className={autoplay ? "" : "play"}
+      ></StopButton>
     </ButtonWrap>
   );
 };

@@ -263,4 +263,7 @@ export const StopButton = styled.button`
 
     box-sizing: border-box;
   }
+  &.play {
+    background-image: url(https://www.lge.co.kr/lg5-common/images/icons/btn-carousel-46-play.svg);
+  }
 `;
