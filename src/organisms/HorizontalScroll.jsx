@@ -69,8 +69,7 @@ const HorizontalScroll = () => {
   return (
     <Container>
       <Draggable axis="x" onDrag={handleDrag}>
-        <SectionWrap>
-          {/* <div className="section-list" style={{ display: "flex" }}> */}
+        <SectionWrap className="section-list">
           {items.map((item, index) => (
             <a
               key={index}
@@ -100,8 +99,6 @@ const HorizontalScroll = () => {
               </ItemInfo>
             </a>
           ))}
-
-          {/* </div> */}
         </SectionWrap>
       </Draggable>
     </Container>
