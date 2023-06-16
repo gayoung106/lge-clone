@@ -1,29 +1,37 @@
 import React from "react";
+
 import {
   ButtonWrap,
   SlideControls,
-  Constrols,
+  Controls,
   BeforeButton,
   SlidePages,
   AfterButton,
   StopButton,
+  Strong,
   Count,
 } from "../styles/Carousel";
 
-const SlideButton = () => {
+const SlideButton = ({
+  currentSlide,
+  handlePrev,
+  handleNext,
+  handleStop,
+  autoplay,
+}) => {
   return (
     <ButtonWrap>
       <SlideControls>
-        <Constrols>
-          <BeforeButton></BeforeButton>
+        <Controls>
+          <BeforeButton onClick={handlePrev}></BeforeButton>
           <SlidePages>
-            <strong></strong>
+            <Strong>{currentSlide + 1}</Strong>
             <Count>10</Count>
           </SlidePages>
-          <AfterButton></AfterButton>
-        </Constrols>
+          <AfterButton onClick={handleNext}></AfterButton>
+        </Controls>
       </SlideControls>
-      <StopButton></StopButton>
+      <StopButton onClick={handleStop} autoplay={autoplay}></StopButton>
     </ButtonWrap>
   );
 };

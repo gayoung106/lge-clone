@@ -105,11 +105,8 @@ export const CarouselWrap = styled.div`
   width: 100%;
   height: 600px;
   overflow: hidden;
-  /* top: 0; */
   left: 0;
   display: block;
-  /* position: absolute; */
-  /* z-index: 1; */
   margin-top: 5px;
   margin-bottom: 0;
 `;
@@ -120,15 +117,7 @@ export const CarouselImg = styled.img`
   min-height: 100%;
   min-width: 100%;
   margin: 0;
-  object-fit: contain; //
-
-  /* @media (min-width: 2600px) {
-    max-width: 2600px;
-  }
-
-  @media (max-width: 767px) {
-    max-width: 767px;
-  } */
+  object-fit: contain;
 `;
 
 /** carousel button css */
@@ -176,10 +165,13 @@ export const BeforeButton = styled.button`
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  border: none;
   font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
 
   &::before {
-    background-image: url(/lg5-common/images/icons/btn-arr-24x24-lt.svg);
+    background-image: url(https://www.lge.co.kr/lg5-common/images/icons/btn-arr-24x24-lt.svg);
     content: "";
     display: block;
     width: 24px;
@@ -188,6 +180,7 @@ export const BeforeButton = styled.button`
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: 100%;
+    box-sizing: border-box;
   }
 `;
 
@@ -195,7 +188,15 @@ export const SlidePages = styled.span`
   padding: 0 4px;
   color: #fff;
   font-size: 16px;
-  line-height: 36px;
+  line-height: 42px;
+`;
+
+export const Strong = styled.strong`
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  line-height: 42px;
+  text-align: center;
 `;
 
 export const Count = styled.em`
@@ -218,10 +219,13 @@ export const AfterButton = styled.button`
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   font-size: 0;
 
   &::before {
-    background-image: url(/lg5-common/images/icons/btn-arr-24x24-rt.svg);
+    background-image: url(https://www.lge.co.kr/lg5-common/images/icons/btn-arr-24x24-rt.svg);
     content: "";
     display: block;
     width: 24px;
@@ -241,6 +245,14 @@ export const StopButton = styled.button`
   position: relative;
   font-size: 0;
   text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  background-image: url(https://www.lge.co.kr/lg5-common/images/icons/btn-carousel-46-pause.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+  content: "";
 
   &::before {
     width: 36px;
@@ -249,12 +261,6 @@ export const StopButton = styled.button`
     display: inline-block;
     content: "";
 
-    &.play {
-      background-image: url(/lg5-common/images/icons/btn-carousel-46-play.svg);
-    }
-
-    &.stop {
-      background-image: url(/lg5-common/images/icons/btn-carousel-46-pause.svg);
-    }
+    box-sizing: border-box;
   }
 `;

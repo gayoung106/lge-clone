@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   CarouselWrap,
   CarouselImg,
-  ButtonWrap,
-  SlideControls,
-  Controls,
-  BeforeButton,
-  SlidePages,
-  Count,
-  AfterButton,
-  StopButton,
   InfoWrap,
   InfoBox,
   LogoWrap,
@@ -22,14 +14,26 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { banners } from "../data/carouselItem";
+import SlideButton from "../organisms/SlideButton";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
+  const sliderRef = useRef(null);
 
-  const handleSlideChange = (currentSlide) => {
-    setCurrentSlide(currentSlide);
+  const handlePrev = () => {
+    sliderRef.current.slickPrev();
+    setCurrentSlide((prevSlide) => prevSlide - 1);
   };
 
+  const handleNext = () => {
+    sliderRef.current.slickNext();
+    setCurrentSlide((preSlide) => preSlide + 1);
+  };
+
+  const handleStop = () => {
+    setAutoplay(false);
+  };
   const settings = {
     dots: false,
     infinite: true,
@@ -38,42 +42,38 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    beforeChange: (oldIndex, newIndex) => handleSlideChange(newIndex),
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
 
   return (
-    <Slider style={{ position: "relative", opacity: "1" }} {...settings}>
-      {banners.map((item, index) => (
-        <CarouselWrap key={index}>
-          <CarouselImg src={item.image} alt="" />
-          {currentSlide === index && (
-            <InfoWrap>
-              <InfoBox>
-                <LogoWrap>
-                  <LogoImg src={item.logo} alt="/" />
-                </LogoWrap>
-                <PText>{item.text}</PText>
-                <PSmall>{item.desc}</PSmall>
-                <LinkWrap></LinkWrap>
-              </InfoBox>
-            </InfoWrap>
-          )}
-        </CarouselWrap>
-      ))}
-
-      {/* <ButtonWrap>
-        <SlideControls>
-          <Controls>
-            <BeforeButton></BeforeButton>
-            <SlidePages>
-              <Count>1</Count>/10
-            </SlidePages>
-            <AfterButton></AfterButton>
-          </Controls>
-          <StopButton></StopButton>
-        </SlideControls>
-      </ButtonWrap> */}
-    </Slider>
+    <div style={{ position: "relative" }}>
+      <Slider {...settings} ref={sliderRef}>
+        {banners.map((item, index) => (
+          <CarouselWrap key={index}>
+            <CarouselImg src={item.image} alt="" />
+            {currentSlide === index && (
+              <InfoWrap>
+                <InfoBox>
+                  <LogoWrap>
+                    <LogoImg src={item.logo} alt="/" />
+                  </LogoWrap>
+                  <PText>{item.text}</PText>
+                  <PSmall>{item.desc}</PSmall>
+                  <LinkWrap></LinkWrap>
+                </InfoBox>
+              </InfoWrap>
+            )}
+          </CarouselWrap>
+        ))}
+      </Slider>
+      <SlideButton
+        currentSlide={currentSlide}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        handleStop={handleStop}
+        autoplay={autoplay}
+      />
+    </div>
   );
 };
 
